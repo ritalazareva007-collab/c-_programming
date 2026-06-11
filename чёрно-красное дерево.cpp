@@ -249,6 +249,7 @@ public:
             TREE * node = current;
             delete temp;
 
+            // НА ДАННЫЙ МОМЕНТ ЭТА ЧАСТЬ НЕ РАБОТАЕТ И ПОЛНОСТЬЮ СТИРАЕТ ДЕРЕВО - ПРИЧИНА ПОКА НЕ НАЙДЕНА
             if (current_color == true) {
                 //если текущая вершина - корень, ничего не делаем
                 if (node -> parent == nullptr) {
