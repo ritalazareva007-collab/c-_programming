@@ -171,7 +171,7 @@ public:
 
 };
 
-/*
+
 int main() {
     TREE tree;
     TREE * root = nullptr;
@@ -199,5 +199,5 @@ int main() {
     }
     return 0;
 }
-*/
+
 
