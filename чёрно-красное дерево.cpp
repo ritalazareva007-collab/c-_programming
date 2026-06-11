@@ -331,7 +331,7 @@ int main() {
     TREE tree;
     TREE * root = nullptr;
 
-    // Вставляем числа
+    // Вставляем произвольные числа
     int numbers[] = {7, 3, 9, 10, 22, 8, 11, 26, 2, 6, 13};
     //int numbers[] = {7, 3, 9, 10, 22};
     int n = sizeof(numbers) / sizeof(numbers[0]);
