@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 using namespace std;
 
 template <typename T>
@@ -50,11 +51,14 @@ public:
         cout << "deleted element:" << head->data << endl;
         Node *temp = head;
         head = head->next;
-        head->prev = nullptr;
+
 
         // если не осталось ни одного элемента - зануляем хвост
-        if (head == nullptr) {
-            tail = nullptr;;
+        if (head != nullptr) {
+            head->prev = nullptr;
+        }
+        else{
+            tail = nullptr;
         }
         delete temp;
     }
@@ -71,28 +75,47 @@ public:
                 newNode->next = head;
                 head = newNode;
             }
+            return;
         }
 
         Node *current = head;
         for (int i = 0; i < position - 1; ++i) {
             current = current->next;
         }
+        if (current == nullptr) {
+            push(value);
+            return;
+        }
 
         Node *newNode = new Node(value);
         newNode->next = current->next;
-        current->next->prev = newNode;
+        if (current->next != nullptr) {
+            current->next->prev = newNode;
+        }
+        else {
+            tail = newNode;
+        }
         current->next = newNode;
         newNode->prev = current;
+        cout << "Added a new node with value: " << value << endl;
     }
 };
 
 int main() {
     Queue<int> q;
-    q.push(4);
-    q.push(5);
-    q.pop();
-    q.push(7);
-    q.push(9);
-    q.push(10);
-    q.insert(3, 25);
+    try {
+        q.push(4);
+        q.push(5);
+        q.pop();
+        q.push(7);
+        q.push(9);
+        q.push(10);
+        q.pop();
+        q.pop();
+        q.pop();
+
+        q.insert(1, 25);
+    }catch (const exception& e) {
+        cerr << e.what() << endl;
+    }
 }
