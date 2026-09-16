@@ -1,0 +1,33 @@
+Complex value in circle
+iteration: {0} |f(z)| = 0.65
+iteration: {1} |f(z)| = 0.4225
+iteration: {2} |f(z)| = 0.178506
+iteration: {3} |f(z)| = 0.0318645
+iteration: {4} |f(z)| = 0.00101535
+iteration: {5} |f(z)| = 1.03093e-06
+iteration: {6} |f(z)| = 1.06281e-12
+iteration: {7} |f(z)| = 1.12956e-24
+iteration: {8} |f(z)| = 1.27591e-48
+iteration: {9} |f(z)| = 1.62794e-96
+iteration: {10} |f(z)| = 0
+iteration: {11} |f(z)| = 0
+iteration: {12} |f(z)| = 0
+iteration: {13} |f(z)| = 0
+iteration: {14} |f(z)| = 0
+--------------------------------------------------------------------
+Complex value out of circle
+iteration: {0} |f(z)| = 20
+iteration: {1} |f(z)| = 400
+iteration: {2} |f(z)| = 160000
+iteration: {3} |f(z)| = 2.56e+10
+iteration: {4} |f(z)| = 6.5536e+20
+iteration: {5} |f(z)| = 4.29497e+41
+iteration: {6} |f(z)| = 1.84467e+83
+iteration: {7} |f(z)| = inf
+iteration: {8} |f(z)| = nan
+iteration: {9} |f(z)| = nan
+iteration: {10} |f(z)| = nan
+iteration: {11} |f(z)| = nan
+iteration: {12} |f(z)| = nan
+iteration: {13} |f(z)| = nan
+iteration: {14} |f(z)| = nan

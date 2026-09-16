@@ -45,6 +45,7 @@ public:
     }
 };
 
+
 int main() {
     ForwardList<int> list;
     list.push_front(7);

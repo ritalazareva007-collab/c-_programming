@@ -77,6 +77,7 @@ private:
     float percent;
 };
 
+
 int main() {
     // считываем имя пользователя
     std::string username;
