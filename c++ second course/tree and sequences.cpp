@@ -115,16 +115,14 @@ private:
         if (node == nullptr) {
             return;
         }
-
         // Печатаем текущий узел
         cout << prefix;
         cout << (isLeft ? "|-- " : "|__ ");
 
         char sign = (node->data.Im >= 0) ? '+' : '-';
-        cout << "(" << node->data.Re << " " << sign << " "
-             << abs(node->data.Im) << "i)\n";
+        cout << node->data.Re << " " << sign << " "
+             << "i" << abs(node->data.Im) << "\n";
 
-        // Рекурсивно печатаем детей с обновленным префиксом
         string newPrefix = prefix + (isLeft ? "|   " : "    ");
         printTree(node->left, newPrefix, true);
         printTree(node->right, newPrefix, false);
@@ -158,6 +156,9 @@ int main() {
         return 1;
     }
 
+    Complex<double> z_0(1.0, 0.0);
+    print(15, z_0, OutFile);
+    OutFile << "--------------------------------------------------------------------" << endl;
     OutFile << "Complex value in circle" << endl;
     Complex<double> z_1(0.4, 0.7);
     print(15, z_1, OutFile);
